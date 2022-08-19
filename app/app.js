@@ -4,12 +4,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
-dotenv.config();
 
 const app = express();
+dotenv.config();
+
 
 //routing
 const home = require("./src/routes/home");
+
+const logger = require("./src/config/logger");
+logger.log("info", "Hello wwww");
 
 //setting app
 app.set("views", "./src/views");
